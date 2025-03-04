@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Pose Assistant</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen font-[Poppins]">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-800 mb-2">
+                <i class="fas fa-camera-retro mr-2"></i>Photography Pose Assistant
+            </h1>
+            <p class="text-gray-600">Get personalized pose suggestions for your perfect shot!</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-2xl mx-auto">
+            <!-- Language Selection Section -->
+            <section id="language-selection" class="bg-white rounded-lg shadow-lg p-8 mb-8 transition-all duration-300">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">What language are you comfortable with?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button class="lang-btn" data-lang="en">
+                        <i class="fas fa-globe-americas text-2xl mb-2"></i>
+                        English
+                    </button>
+                    <button class="lang-btn" data-lang="es">
+                        <i class="fas fa-globe-europe text-2xl mb-2"></i>
+                        Español
+                    </button>
+                    <button class="lang-btn" data-lang="fr">
+                        <i class="fas fa-globe-europe text-2xl mb-2"></i>
+                        Français
+                    </button>
+                    <button class="lang-btn" data-lang="de">
+                        <i class="fas fa-globe-europe text-2xl mb-2"></i>
+                        Deutsch
+                    </button>
+                </div>
+                <p id="lang-error" class="text-red-500 mt-4 hidden">Please select a language to continue.</p>
+            </section>
+
+            <!-- Outfit Selection Section -->
+            <section id="outfit-selection" class="bg-white rounded-lg shadow-lg p-8 mb-8 hidden transition-all duration-300">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">What outfit are you wearing?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <button class="outfit-btn" data-outfit="casual">
+                        <i class="fas fa-tshirt text-3xl mb-2"></i>
+                        <span>Casual Fit</span>
+                    </button>
+                    <button class="outfit-btn" data-outfit="formal">
+                        <i class="fas fa-user-tie text-3xl mb-2"></i>
+                        <span>Formal</span>
+                    </button>
+                    <button class="outfit-btn" data-outfit="wedding">
+                        <i class="fas fa-ring text-3xl mb-2"></i>
+                        <span>Wedding</span>
+                    </button>
+                </div>
+                <p id="outfit-error" class="text-red-500 mt-4 hidden">Please select an outfit to continue.</p>
+            </section>
+
+            <!-- Pose Suggestions Section -->
+            <section id="pose-results" class="bg-white rounded-lg shadow-lg p-8 hidden transition-all duration-300">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Recommended Poses</h2>
+                <div id="poses-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Poses will be dynamically inserted here -->
+                </div>
+                <button id="start-over" class="mt-8 bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                    <i class="fas fa-redo mr-2"></i>Start Over
+                </button>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-gray-600">
+            <p>&copy; 2024 Photography Pose Assistant. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
